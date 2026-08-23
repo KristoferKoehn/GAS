@@ -1,0 +1,4 @@
+[25]
+# Heal a portion of dealt damage.
+$heal_amount = $physical * 0.2
+$hp = min($max_hp, $hp + $heal_amount)

@@ -1,0 +1,4 @@
+[40]
+# Final combined damage total.
+$final_damage = $physical + $fire + $ice + $poison
+$total = max(0, $final_damage)

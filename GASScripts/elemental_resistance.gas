@@ -1,0 +1,5 @@
+[20]
+# Elemental damage after resistance scaling.
+$fire_resisted = $fire * (1 - $resistance / 10)
+$ice_resisted = $ice * (1 - $resistance / 10)
+$total = $physical + $fire_resisted + $ice_resisted

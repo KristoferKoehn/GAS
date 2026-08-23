@@ -1,0 +1,4 @@
+[20]
+# Lightning scales with level.
+$lightning = 2d6 + $level
+$total = $physical + $lightning

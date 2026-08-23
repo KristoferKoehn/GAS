@@ -1,0 +1,4 @@
+[15]
+# Dodge converted to a roll penalty.
+$evasion = floor($dodge * 20)
+$hit_roll = $hit_roll - $evasion

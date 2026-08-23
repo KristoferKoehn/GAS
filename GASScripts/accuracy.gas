@@ -1,0 +1,4 @@
+[10]
+# Accuracy from level and a.
+$hit_bonus = $level + $a
+$accuracy = clamp($hit_bonus, 1, 20)

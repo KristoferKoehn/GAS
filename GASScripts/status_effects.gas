@@ -1,0 +1,5 @@
+[20]
+# Status effect multipliers.
+$slow_multiplier = 0.9
+$burn_multiplier = 1.1
+$total = $physical * $slow_multiplier + $fire * $burn_multiplier

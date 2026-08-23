@@ -1,0 +1,5 @@
+[20]
+# Ice damage with level scaling.
+$ice_bonus = $level * 0.5
+$ice = $ice + $ice_bonus
+$total = $physical + $ice

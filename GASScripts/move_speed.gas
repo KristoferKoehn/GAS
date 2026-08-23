@@ -1,0 +1,4 @@
+[5]
+# Move speed from dodge.
+$move = 5 + $dodge * 10
+$total = $move

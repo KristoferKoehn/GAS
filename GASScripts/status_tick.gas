@@ -1,0 +1,4 @@
+[30]
+# Poison and burn ticks.
+$tick = $poison + $burn
+$hp = max(0, $hp - $tick)

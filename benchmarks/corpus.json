@@ -1,0 +1,558 @@
+{
+	"cache_miss_ratio": 0.2,
+	"target_statement_count": 120,
+	"files": [
+		{
+			"path": "res://GASScripts/calculator.gas",
+			"weight": 0.20,
+			"priority_base": 30
+		},
+		{
+			"path": "res://GASScripts/status_effects.gas",
+			"weight": 0.10,
+			"priority_base": 20
+		},
+		{
+			"path": "res://GASScripts/attack_roll.gas",
+			"weight": 0.10,
+			"priority_base": 10
+		},
+		{
+			"path": "res://GASScripts/defense.gas",
+			"weight": 0.08,
+			"priority_base": 15
+		},
+		{
+			"path": "res://GASScripts/healing.gas",
+			"weight": 0.06,
+			"priority_base": 25
+		},
+		{
+			"path": "res://GASScripts/crit_damage.gas",
+			"weight": 0.08,
+			"priority_base": 10
+		},
+		{
+			"path": "res://GASScripts/elemental_resistance.gas",
+			"weight": 0.08,
+			"priority_base": 20
+		},
+		{
+			"path": "res://GASScripts/mana_cost.gas",
+			"weight": 0.05,
+			"priority_base": 5
+		},
+		{
+			"path": "res://GASScripts/status_tick.gas",
+			"weight": 0.06,
+			"priority_base": 30
+		},
+		{
+			"path": "res://GASScripts/accuracy.gas",
+			"weight": 0.05,
+			"priority_base": 10
+		},
+		{
+			"path": "res://GASScripts/evasion.gas",
+			"weight": 0.05,
+			"priority_base": 15
+		},
+		{
+			"path": "res://GASScripts/armor_penetration.gas",
+			"weight": 0.05,
+			"priority_base": 10
+		},
+		{
+			"path": "res://GASScripts/fire_damage.gas",
+			"weight": 0.06,
+			"priority_base": 20
+		},
+		{
+			"path": "res://GASScripts/ice_damage.gas",
+			"weight": 0.06,
+			"priority_base": 20
+		},
+		{
+			"path": "res://GASScripts/lightning_damage.gas",
+			"weight": 0.05,
+			"priority_base": 20
+		},
+		{
+			"path": "res://GASScripts/poison_damage.gas",
+			"weight": 0.05,
+			"priority_base": 30
+		},
+		{
+			"path": "res://GASScripts/burn_damage.gas",
+			"weight": 0.05,
+			"priority_base": 30
+		},
+		{
+			"path": "res://GASScripts/lifesteal.gas",
+			"weight": 0.05,
+			"priority_base": 25
+		},
+		{
+			"path": "res://GASScripts/regeneration.gas",
+			"weight": 0.05,
+			"priority_base": 25
+		},
+		{
+			"path": "res://GASScripts/mana_regen.gas",
+			"weight": 0.04,
+			"priority_base": 5
+		},
+		{
+			"path": "res://GASScripts/shield_block.gas",
+			"weight": 0.05,
+			"priority_base": 15
+		},
+		{
+			"path": "res://GASScripts/counter_attack.gas",
+			"weight": 0.05,
+			"priority_base": 10
+		},
+		{
+			"path": "res://GASScripts/stun_check.gas",
+			"weight": 0.04,
+			"priority_base": 15
+		},
+		{
+			"path": "res://GASScripts/bleed_damage.gas",
+			"weight": 0.05,
+			"priority_base": 30
+		},
+		{
+			"path": "res://GASScripts/crit_chance.gas",
+			"weight": 0.05,
+			"priority_base": 10
+		},
+		{
+			"path": "res://GASScripts/damage_reduction.gas",
+			"weight": 0.05,
+			"priority_base": 20
+		},
+		{
+			"path": "res://GASScripts/armor_class.gas",
+			"weight": 0.04,
+			"priority_base": 15
+		},
+		{
+			"path": "res://GASScripts/spell_power.gas",
+			"weight": 0.05,
+			"priority_base": 20
+		},
+		{
+			"path": "res://GASScripts/attack_speed.gas",
+			"weight": 0.04,
+			"priority_base": 10
+		},
+		{
+			"path": "res://GASScripts/move_speed.gas",
+			"weight": 0.04,
+			"priority_base": 5
+		},
+		{
+			"path": "res://GASScripts/luck_bonus.gas",
+			"weight": 0.04,
+			"priority_base": 10
+		},
+		{
+			"path": "res://GASScripts/final_damage.gas",
+			"weight": 0.06,
+			"priority_base": 40
+		}
+	],
+	"statements": [
+		{
+			"source": "$total = $physical + $fire",
+			"weight": 0.12,
+			"priority": 10,
+			"category": "assignment"
+		},
+		{
+			"source": "$hp = max(0, $hp - $poison)",
+			"weight": 0.08,
+			"priority": 30,
+			"category": "assignment"
+		},
+		{
+			"source": "max($a, $b)",
+			"weight": 0.05,
+			"priority": 10,
+			"category": "function"
+		},
+		{
+			"source": "min($hp, $max_hp)",
+			"weight": 0.04,
+			"priority": 10,
+			"category": "function"
+		},
+		{
+			"source": "clamp($level, 1, 10)",
+			"weight": 0.04,
+			"priority": 10,
+			"category": "function"
+		},
+		{
+			"source": "abs($fire - $ice)",
+			"weight": 0.03,
+			"priority": 10,
+			"category": "function"
+		},
+		{
+			"source": "floor($physical / 3)",
+			"weight": 0.03,
+			"priority": 10,
+			"category": "function"
+		},
+		{
+			"source": "ceil($fire / 2)",
+			"weight": 0.03,
+			"priority": 10,
+			"category": "function"
+		},
+		{
+			"source": "3d6 + 2d8",
+			"weight": 0.07,
+			"priority": 10,
+			"category": "dice"
+		},
+		{
+			"source": "d20() + $strength",
+			"weight": 0.05,
+			"priority": 10,
+			"category": "dice"
+		},
+		{
+			"source": "advantage()",
+			"weight": 0.04,
+			"priority": 10,
+			"category": "dice"
+		},
+		{
+			"source": "roll(3, 6)",
+			"weight": 0.04,
+			"priority": 10,
+			"category": "dice"
+		},
+		{
+			"source": "$a + $b * $c",
+			"weight": 0.08,
+			"priority": 10,
+			"category": "arithmetic"
+		},
+		{
+			"source": "$resistance + $armor * 0.5",
+			"weight": 0.05,
+			"priority": 10,
+			"category": "arithmetic"
+		},
+		{
+			"source": "($physical + $fire) / 2",
+			"weight": 0.04,
+			"priority": 10,
+			"category": "arithmetic"
+		},
+		{
+			"source": "2 ^ $level",
+			"weight": 0.03,
+			"priority": 10,
+			"category": "arithmetic"
+		},
+		{
+			"source": "$crit_chance * 100 % 10",
+			"weight": 0.02,
+			"priority": 10,
+			"category": "arithmetic"
+		},
+		{
+			"source": "[1, 2, 3]",
+			"weight": 0.03,
+			"priority": 10,
+			"category": "array"
+		},
+		{
+			"source": "sum([$physical, $fire, $ice])",
+			"weight": 0.04,
+			"priority": 10,
+			"category": "array"
+		},
+		{
+			"source": "count([1, 2, 3])",
+			"weight": 0.03,
+			"priority": 10,
+			"category": "array"
+		},
+		{
+			"source": "$hp > 0 and $hp < $max_hp",
+			"weight": 0.03,
+			"priority": 10,
+			"category": "logic"
+		},
+		{
+			"source": "not ($hp > $max_hp)",
+			"weight": 0.02,
+			"priority": 10,
+			"category": "logic"
+		},
+		{
+			"source": "$physical == $fire or $ice > $resistance",
+			"weight": 0.02,
+			"priority": 10,
+			"category": "logic"
+		},
+		{
+			"source": "$mana = max(0, $mana - 1)",
+			"weight": 0.03,
+			"priority": 30,
+			"category": "assignment"
+		},
+		{
+			"source": "$hp = min($max_hp, $hp + $healing)",
+			"weight": 0.03,
+			"priority": 25,
+			"category": "assignment"
+		},
+		{
+			"source": "$damage = $strength + 1d8",
+			"weight": 0.03,
+			"priority": 10,
+			"category": "assignment"
+		},
+		{
+			"source": "$total = $damage * $crit_multiplier",
+			"weight": 0.03,
+			"priority": 40,
+			"category": "assignment"
+		},
+		{
+			"source": "$armor = $armor + 1",
+			"weight": 0.02,
+			"priority": 10,
+			"category": "assignment"
+		},
+		{
+			"source": "$dodge = clamp($dodge, 0, 0.9)",
+			"weight": 0.02,
+			"priority": 20,
+			"category": "assignment"
+		},
+		{
+			"source": "$level = $level + 1",
+			"weight": 0.02,
+			"priority": 10,
+			"category": "assignment"
+		},
+		{
+			"source": "$physical = $physical * 0.8",
+			"weight": 0.02,
+			"priority": 20,
+			"category": "assignment"
+		},
+		{
+			"source": "max($physical, $fire)",
+			"weight": 0.03,
+			"priority": 10,
+			"category": "function"
+		},
+		{
+			"source": "min($resistance, $armor)",
+			"weight": 0.03,
+			"priority": 10,
+			"category": "function"
+		},
+		{
+			"source": "clamp($hp, 0, $max_hp)",
+			"weight": 0.03,
+			"priority": 10,
+			"category": "function"
+		},
+		{
+			"source": "abs($poison - $burn)",
+			"weight": 0.02,
+			"priority": 10,
+			"category": "function"
+		},
+		{
+			"source": "floor($mana / 2)",
+			"weight": 0.02,
+			"priority": 10,
+			"category": "function"
+		},
+		{
+			"source": "ceil($level / 3)",
+			"weight": 0.02,
+			"priority": 10,
+			"category": "function"
+		},
+		{
+			"source": "max($strength, $level)",
+			"weight": 0.02,
+			"priority": 10,
+			"category": "function"
+		},
+		{
+			"source": "min($crit_chance, 1)",
+			"weight": 0.02,
+			"priority": 10,
+			"category": "function"
+		},
+		{
+			"source": "2d6 + $fire",
+			"weight": 0.03,
+			"priority": 10,
+			"category": "dice"
+		},
+		{
+			"source": "1d20 + $dodge * 10",
+			"weight": 0.02,
+			"priority": 10,
+			"category": "dice"
+		},
+		{
+			"source": "d6() + $level",
+			"weight": 0.02,
+			"priority": 10,
+			"category": "dice"
+		},
+		{
+			"source": "disadvantage()",
+			"weight": 0.02,
+			"priority": 10,
+			"category": "dice"
+		},
+		{
+			"source": "roll(2, 10)",
+			"weight": 0.02,
+			"priority": 10,
+			"category": "dice"
+		},
+		{
+			"source": "3d4 + 1d6",
+			"weight": 0.02,
+			"priority": 10,
+			"category": "dice"
+		},
+		{
+			"source": "d20() - 5",
+			"weight": 0.02,
+			"priority": 10,
+			"category": "dice"
+		},
+		{
+			"source": "$strength * 2 + $level",
+			"weight": 0.03,
+			"priority": 10,
+			"category": "arithmetic"
+		},
+		{
+			"source": "($fire + $ice) * 1.5",
+			"weight": 0.02,
+			"priority": 10,
+			"category": "arithmetic"
+		},
+		{
+			"source": "$max_hp - $hp",
+			"weight": 0.02,
+			"priority": 10,
+			"category": "arithmetic"
+		},
+		{
+			"source": "$mana / 2 + $level",
+			"weight": 0.02,
+			"priority": 10,
+			"category": "arithmetic"
+		},
+		{
+			"source": "$armor * 0.75",
+			"weight": 0.02,
+			"priority": 10,
+			"category": "arithmetic"
+		},
+		{
+			"source": "$physical + $fire - $ice",
+			"weight": 0.02,
+			"priority": 10,
+			"category": "arithmetic"
+		},
+		{
+			"source": "$healing * (1 + $level / 10)",
+			"weight": 0.02,
+			"priority": 10,
+			"category": "arithmetic"
+		},
+		{
+			"source": "$crit_multiplier * 100",
+			"weight": 0.02,
+			"priority": 10,
+			"category": "arithmetic"
+		},
+		{
+			"source": "sum([$a, $b, $c])",
+			"weight": 0.03,
+			"priority": 10,
+			"category": "array"
+		},
+		{
+			"source": "average([$fire, $ice])",
+			"weight": 0.02,
+			"priority": 10,
+			"category": "array"
+		},
+		{
+			"source": "count([$physical, $fire, $ice, $poison])",
+			"weight": 0.02,
+			"priority": 10,
+			"category": "array"
+		},
+		{
+			"source": "sum([1, 2, 3, 4])",
+			"weight": 0.02,
+			"priority": 10,
+			"category": "array"
+		},
+		{
+			"source": "$hp <= 0 or $mana <= 0",
+			"weight": 0.03,
+			"priority": 10,
+			"category": "logic"
+		},
+		{
+			"source": "$fire > 0 and $resistance < 5",
+			"weight": 0.02,
+			"priority": 10,
+			"category": "logic"
+		},
+		{
+			"source": "not ($level < 1)",
+			"weight": 0.02,
+			"priority": 10,
+			"category": "logic"
+		},
+		{
+			"source": "$physical > 0 and $dodge < 0.5",
+			"weight": 0.02,
+			"priority": 10,
+			"category": "logic"
+		},
+		{
+			"source": "$strength >= 10 or $level >= 5",
+			"weight": 0.02,
+			"priority": 10,
+			"category": "logic"
+		},
+		{
+			"source": "$hp < $max_hp and $healing > 0",
+			"weight": 0.02,
+			"priority": 10,
+			"category": "logic"
+		}
+	],
+	"scenario_weights": {
+		"typical_turn": 0.4,
+		"typical_turn_file": 0.2,
+		"file_mixed": 0.15,
+		"queue_mixed": 0.25
+	}
+}

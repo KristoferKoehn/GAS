@@ -1,0 +1,4 @@
+[30]
+# Burn damage over time.
+$burn_tick = $burn + 1
+$hp = max(0, $hp - $burn_tick)

@@ -1,0 +1,5 @@
+[15]
+# Armor and dodge mitigation.
+$armor_mitigation = $armor * 0.5
+$dodge_chance = clamp($dodge, 0, 1)
+$physical = max(0, $physical - $armor_mitigation)

@@ -1,0 +1,4 @@
+[30]
+# Poison damage over time.
+$poison_tick = $poison + $level / 2
+$hp = max(0, $hp - $poison_tick)

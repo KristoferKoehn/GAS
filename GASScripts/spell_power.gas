@@ -1,0 +1,4 @@
+[20]
+# Spell power from level and mana.
+$power = $level * 2 + $mana / 4
+$fire = $fire + $power

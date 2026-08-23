@@ -1,0 +1,4 @@
+[20]
+# Flat and percent reduction.
+$flat = max(0, $physical - $resistance)
+$total = $flat * 0.9

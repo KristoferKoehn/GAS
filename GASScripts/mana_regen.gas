@@ -1,0 +1,4 @@
+[5]
+# Mana recovery.
+$regen = 1 + $level / 4
+$mana = min($max_mana, $mana + $regen)

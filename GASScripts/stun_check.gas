@@ -1,0 +1,4 @@
+[15]
+# Stun resisted by level.
+$stun_chance = max(0, 0.5 - $level / 20)
+$total = $physical * (1 - $stun_chance)

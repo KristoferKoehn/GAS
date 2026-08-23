@@ -1,0 +1,4 @@
+[10]
+# Luck adds to d20 rolls.
+$luck = $crit_chance * 10
+$hit_roll = $hit_roll + $luck

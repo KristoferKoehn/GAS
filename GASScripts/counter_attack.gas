@@ -1,0 +1,4 @@
+[10]
+# Counter damage on block.
+$counter = $strength + 1d6
+$total = $physical + $counter

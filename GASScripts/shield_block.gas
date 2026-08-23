@@ -1,0 +1,4 @@
+[15]
+# Shield absorbs physical damage.
+$blocked = min($armor, $physical)
+$physical = max(0, $physical - $blocked)

@@ -1,0 +1,4 @@
+[25]
+# Passive regeneration.
+$regen = 2 + $level / 3
+$hp = min($max_hp, $hp + $regen)

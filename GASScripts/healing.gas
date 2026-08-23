@@ -1,0 +1,5 @@
+[25]
+# Healing capped by missing health.
+$missing_hp = max(0, $max_hp - $hp)
+$heal_amount = min($healing, $missing_hp)
+$hp = $hp + $heal_amount

@@ -1,0 +1,4 @@
+[5]
+# Ability cost deducted from mana.
+$cost = 3 + $level
+$mana = max(0, $mana - $cost)

@@ -1,0 +1,5 @@
+[10]
+# Attack roll and mitigated physical damage.
+$hit_roll = 1d20 + $strength
+$damage = 2d6 + $strength
+$physical = max(0, $damage - $resistance)

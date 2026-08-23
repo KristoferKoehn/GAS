@@ -1,0 +1,4 @@
+[10]
+# Armor penetration reduces effective armor.
+$effective_armor = max(0, $armor - $level)
+$physical = $physical + $effective_armor * 0.25

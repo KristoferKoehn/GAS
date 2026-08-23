@@ -1,0 +1,4 @@
+[10]
+# Attack speed factor.
+$speed = 1 + $level / 10
+$total = $physical * $speed

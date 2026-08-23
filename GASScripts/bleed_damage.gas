@@ -1,0 +1,4 @@
+[30]
+# Bleed based on strength.
+$bleed = max(1, $strength / 4)
+$hp = max(0, $hp - $bleed)

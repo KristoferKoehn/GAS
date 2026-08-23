@@ -1,0 +1,9 @@
+[30]
+# Mitigation: armor cuts physical damage, then flat resistance applies.
+# Fire was already reduced by the defender's amulet at priority 20.
+$physical = max(0, $physical - $resistance)
+$total = $physical + $fire + $ice
+
+[40]
+# Final combined elemental damage.
+$final_damage = $total

@@ -1,0 +1,4 @@
+[15]
+# Armor class from armor and dodge.
+$ac = $armor + floor($dodge * 10)
+$hit_roll = $hit_roll - $ac

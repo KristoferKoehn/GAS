@@ -1,0 +1,4 @@
+[20]
+# Fire damage with burn scaling.
+$fire_bonus = $burn * 2
+$fire = $fire + $fire_bonus

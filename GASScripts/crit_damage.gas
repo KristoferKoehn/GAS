@@ -1,0 +1,5 @@
+[10]
+# Critical hit bonus.
+$crit_bonus = $crit_multiplier - 1.0
+$damage = $physical + $fire + $ice
+$total = $damage * (1 + $crit_bonus)
